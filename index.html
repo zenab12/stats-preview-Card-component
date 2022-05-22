@@ -10,24 +10,192 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;600;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
+    :root
+    {
+--Very-dark-blue-main-background: hsl(233, 47%, 7%);
+--Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+--Soft-violet-accent: hsl(277, 64%, 61%);
+--White-main-heading-stats: hsl(0, 0%, 100%);
+--Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+--overlay: #902ecc7a;
+    }
+
+  body
+  {
+    font-size: 15px;
+    background: var(--Very-dark-blue-main-background);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    min-height: 100vh;
+   }
+
+   main{width: min(100% - 1.5rem,800px);border-radius: 15px;}
+
+   div.card
+   {
+    display: grid;
+    grid-template-columns:3fr 3fr;
+    grid-template-rows: minmax(200px, auto);
+    border-radius: 15px;
+
+  }
+   div.details
+   {
+    background: var(--Dark-desaturated-blue-card-background);
+    padding: 40px;
+    border-radius: 15px 0px 0px 15px;
+   }
+    div.details h1
+   {
+    color: var(--White-main-heading-stats);
+    font-family: 'Inter', sans-serif;
+   }
+     div.details h1 span
+   {
+    color: var(--Soft-violet-accent);
+   }
+
+   div.details p
+   {
+    color: var(--Slightly-transparent-white-main-paragraph);
+    line-height: 25px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+   }
+   div.details ul 
+   {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0px;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+   }
+   div.details ul li
+   {
+   color: var(--White-main-heading-stats);
+   }
+ div.details ul li h2 , div.details ul li p
+   {
+   margin: 0px;
+   }
+    div.details ul li p
+    {
+      font-size: 12px;
+      font-family: 'Lexend Deca', sans-serif;
+      text-transform: uppercase;
+
+    }
+   div.image
+   {
+    position: relative;
+    background: url(images/image-header-desktop.jpg)no-repeat;
+    background-size: cover;
+   border-radius: 0px 15px 15px 0px;
+   padding: 0px;
+
+   }
+   div.image .overlay
+   {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: var(--overlay);
+    border-radius: 0px 15px 15px 0px;
+
+   }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media(max-width: 775px)
+    {
+         body{text-align: center;}
+         div.card
+         {
+          grid-template-columns:1fr;
+          grid-template-rows: minmax(300px, auto);
+          border-radius: 15px;
+
+        }
+          div.card .details
+         {
+          order: 1;
+          border-radius: 0px 0px 15px 15px;
+          padding: 10px;
+
+
+        }
+
+         div.image
+         {
+          background: url(images/image-header-mobile.jpg)no-repeat;
+          background-size: cover;
+          border-radius: 15px 15px 0px 0px;
+
+         }
+           div.image .overlay
+             {
+              border-radius: 15px 15px 0px 0px;
+             }
+             main {
+    width: 90%;
+    border-radius: 15px;
+  }
+
+ div.details ul 
+   {
+    display: flex;
+   flex-direction: column;
+   gap: 30px;
+   }
+   
+    }
+
+    @media(min-width: 450px) and (max-width: 775px)
+    {
+          main {
+    width: 80%;
+  }
+    }
   </style>
 </head>
 <body>
+<main>
+  <div class="card">
+    <div class="details">
+      <h1>  Get <span>insights</span> that help your business grow. </h1>
+      <p> Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+  experience, and overall efficiency.</p>
+      <ul>
+        <li><h2>10K+</h2><p>companies</p></li>
+        <li><h2>314</h2><p>templates</p></li>
+        <li><h2>12M+</h2><p>queries</p></li>
 
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
+      </ul>
+    </div>
+    <div class="image">
+      <div class="overlay"></div>
+    </div>
+  </div>
+</main>
+<!--
+<footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+</footer>
+ -->
 </body>
 </html>
