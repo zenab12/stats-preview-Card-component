@@ -48,7 +48,7 @@
     display: grid;
     grid-template-columns:3fr 3fr;
     grid-template-rows: minmax(200px, auto);
-    border-radius: 15px;
+    border-radius: 10px;
 
   }
    div.details
@@ -56,7 +56,7 @@
     background: var(--Dark-desaturated-blue-card-background);
     padding: 50px;
     padding-bottom: 30px;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 10px 0px 0px 10px;
    }
     div.details h1
    {
@@ -108,6 +108,8 @@
     flex-basis: 48.648%;  
     background-color: var(--Soft-violet-accent);
     overflow: hidden;
+    border-radius: 0px 10px 10px 0px;
+
   }
     .stats-preview__img-wrapper img {
       width: 100%;
@@ -115,6 +117,8 @@
       object-fit: cover; /* to resize it to fit its wrapper */
       mix-blend-mode: multiply;
       opacity: 75%;
+      border-radius: 0px 10px 10px 0px;
+
      }
     
     .image-mobile
@@ -170,18 +174,16 @@
 
          div.image
          {
-          background: url(images/image-header-mobile.jpg)no-repeat;
-          background-size: cover;
-          border-radius: 15px 15px 0px 0px;
+          border-radius: 10px 10px 0px 0px;
 
          }
-           div.image .overlay
+           div.image img
              {
-              border-radius: 15px 15px 0px 0px;
+              border-radius: 10px 10px 0px 0px;
              }
              main {
     width: 90%;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
  div.details ul 
@@ -220,9 +222,11 @@
       </ul>
     </div>
     <div class="image stats-preview__img-wrapper">
-      <!--<div class="overlay"></div>-->
+      <!--
+      <div class="overlay"></div>
+      <img src="images/image-header-mobile.jpg" class="image-mobile" alt="image Header"
+     -->
       <img src="images/image-header-desktop.jpg" class="image-Desktop" alt="image Header">
-      <img src="images/image-header-mobile.jpg" class="image-mobile" alt="image Header">
 
     </div>
   </div>
